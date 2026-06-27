@@ -1,0 +1,26 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+import App from "./App";
+
+import FinanceProvider from "./context/FinanceContext";
+import ThemeProvider from "./context/ThemeContext";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/style.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+
+    <ThemeProvider>
+
+      <FinanceProvider>
+
+        <App />
+
+      </FinanceProvider>
+
+    </ThemeProvider>
+
+  </React.StrictMode>
+);

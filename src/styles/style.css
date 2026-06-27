@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f5f7fb;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:250px;
+
+    min-height:100vh;
+
+    background:#0d6efd;
+
+    padding:20px;
+
+    position:fixed;
+
+}
+
+.logo{
+
+    color:white;
+
+    margin-bottom:40px;
+
+    text-align:center;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:white;
+
+    color:#0d6efd;
+
+}
+
+.sidebar a.active{
+
+    background:white;
+
+    color:#0d6efd;
+
+}
+
+/* Main */
+
+.main-content{
+
+    margin-left:250px;
+
+    width:calc(100% - 250px);
+
+}
+
+/* Navbar */
+
+.top-navbar{
+
+    background:white;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+.card{
+    border-radius:15px;
+}
+
+.card h3{
+    font-weight:bold;
+}
+
+.table{
+    margin-top:20px;
+}
+
+.table td,
+.table th{
+    vertical-align:middle;
+}
+
+.bg-warning{
+    color:black !important;
+}
+
+.card{
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+/* Dark Theme */
+
+body[data-theme="dark"] {
+
+    background:#121212;
+
+    color:white;
+
+}
+
+body[data-theme="dark"] .card{
+
+    background:#1f1f1f;
+
+    color:white;
+
+}
+
+body[data-theme="dark"] .table{
+
+    color:white;
+
+}
+
+body[data-theme="dark"] .top-navbar{
+
+    background:#222;
+
+}
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select{
+
+    background:#333;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+@media(max-width:768px){
+
+.sidebar{
+
+width:100%;
+
+position:relative;
+
+min-height:auto;
+
+}
+
+.main-content{
+
+margin-left:0;
+
+width:100%;
+
+}
+
+.top-navbar{
+
+padding:15px;
+
+}
+
+}
