@@ -1,0 +1,68 @@
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-heading h2 {
+  margin-bottom: 6px;
+  color: #202842;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.dashboard-heading p,
+.dashboard-section-heading p {
+  margin-bottom: 0;
+  color: #8991a5;
+  font-size: 14px;
+}
+
+.dashboard-transactions {
+  margin-top: 8px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #edf0f7;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(34, 45, 80, 0.05);
+}
+
+.dashboard-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard-section-heading h4 {
+  margin-bottom: 6px;
+  color: #202842;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.transaction-count {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #f0edff;
+  color: #7054e8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .dashboard-heading h2 {
+    font-size: 22px;
+  }
+
+  .dashboard-transactions {
+    padding: 15px;
+  }
+
+  .dashboard-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

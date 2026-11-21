@@ -5,9 +5,8 @@ function TransactionTable({ transactions }) {
         <h4 className="mb-3">Transactions</h4>
 
         <div className="table-responsive">
-          <table className="table table-hover table-bordered align-middle">
-
-            <thead className="table-dark">
+          <table className="table table-hover align-middle">
+            <thead>
               <tr>
                 <th>Date</th>
                 <th>Title</th>
@@ -34,19 +33,20 @@ function TransactionTable({ transactions }) {
                       <span
                         className={`badge ${
                           item.type === "Income"
-                            ? "bg-success"
-                            : "bg-danger"
+                            ? "bg-success-subtle text-success"
+                            : "bg-danger-subtle text-danger"
                         }`}
                       >
                         {item.type}
                       </span>
                     </td>
-                    <td>₹ {item.amount}</td>
+                    <td className={item.type === "Income" ? "text-success fw-bold" : "text-danger fw-bold"}>
+                      ₹ {item.amount}
+                    </td>
                   </tr>
                 ))
               )}
             </tbody>
-
           </table>
         </div>
       </div>

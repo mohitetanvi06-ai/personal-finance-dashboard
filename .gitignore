@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +24,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Java / Maven
+backend/target/
+*.class
+*.jar
+*.war
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+
+# IDE
+*.iml
+
+# JDK folder
+Eclipse Adoptium/

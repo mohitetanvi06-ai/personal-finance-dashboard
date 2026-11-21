@@ -1,23 +1,29 @@
-import React from "react";
+import "./DashboardCard.css";
 
-function DashboardCard({ title, amount, bgColor, icon }) {
+function DashboardCard({ title, amount, bgColor, icon, subtitle }) {
+  const formattedAmount = Number(amount || 0).toLocaleString("en-IN", {
+    maximumFractionDigits: 0,
+  });
+
   return (
-    <div className="col-lg-3 col-md-6 mb-4">
-      <div className={`card text-white ${bgColor} shadow border-0`}>
-        <div className="card-body">
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <h6>{title}</h6>
-              <h3>₹ {amount}</h3>
-            </div>
-
-            <div style={{ fontSize: "40px" }}>
-              {icon}
-            </div>
-          </div>
-        </div>
+    <article className={`finance-card ${bgColor || ""}`}>
+      <div className="finance-card-heading">
+        <p className="finance-card-title">{title}</p>
+        <div className="finance-card-icon" aria-hidden="true">{icon}</div>
       </div>
-    </div>
+      <h3 className="finance-card-amount">₹{formattedAmount}</h3>
+      <div className="finance-card-footer">
+        <span className="finance-card-trend" aria-hidden="true">↗</span>
+        <span className="finance-card-subtitle">{subtitle}</span>
+      </div>
+      <div className="finance-card-sparkline" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+    </article>
   );
 }
 

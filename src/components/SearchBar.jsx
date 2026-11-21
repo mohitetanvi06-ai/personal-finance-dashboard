@@ -1,10 +1,13 @@
+import { FaSearch } from "react-icons/fa";
+
 function SearchBar({ search, setSearch }) {
   return (
-    <div className="mb-3">
+    <div className="search-box mb-3">
+      <FaSearch className="search-icon" />
       <input
         type="text"
         className="form-control"
-        placeholder="🔍 Search transactions..."
+        placeholder="Search transactions..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

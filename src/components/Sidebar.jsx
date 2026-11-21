@@ -1,45 +1,66 @@
 import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
 import {
   FaHome,
   FaWallet,
   FaMoneyBillWave,
   FaChartPie,
-  FaCog
+  FaCog,
+  FaPiggyBank,
+  FaCoins,
+  FaCalendarCheck,
+  FaLightbulb,
 } from "react-icons/fa";
 
 function Sidebar() {
   return (
     <div className="sidebar">
+      <h2 className="logo">💰 Finance</h2>
 
-      <h2 className="logo">
-        💰 Finance
-      </h2>
-
-      <NavLink to="/">
+      <NavLink to="/" end>
         <FaHome />
-        Dashboard
+        <span>Dashboard</span>
       </NavLink>
 
       <NavLink to="/income">
         <FaWallet />
-        Income
+        <span>Income</span>
       </NavLink>
 
       <NavLink to="/expense">
         <FaMoneyBillWave />
-        Expense
+        <span>Expense</span>
+      </NavLink>
+
+      <NavLink to="/budget">
+        <FaCoins />
+        <span>Budget Management</span>
+      </NavLink>
+
+      <NavLink to="/bills">
+        <FaCalendarCheck />
+        <span>Bills &amp; EMI</span>
+      </NavLink>
+
+      <NavLink to="/savings-goals">
+        <FaPiggyBank />
+        <span>Savings Goals</span>
+      </NavLink>
+
+      <NavLink to="/money-management">
+        <FaLightbulb />
+        <span>Money Management</span>
       </NavLink>
 
       <NavLink to="/reports">
         <FaChartPie />
-        Reports
+        <span>Reports & Analytics</span>
       </NavLink>
 
       <NavLink to="/settings">
         <FaCog />
-        Settings
+        <span>Settings</span>
       </NavLink>
-
     </div>
   );
 }
