@@ -1,3 +1,4 @@
+
 package com.personalfinance.finance.config;
 
 import com.personalfinance.finance.security.JwtAuthenticationFilter;
@@ -62,7 +63,9 @@ public class SecurityConfig {
                 "http://localhost:5173",
                 "http://localhost:3000",
                 "http://127.0.0.1:5173",
-                "https://personal-finance-dashboard-peach.vercel.app"));
+                "https://personal-finance-dashboard-peach.vercel.app",
+                "https://personal-finance-dashboard-r4djnirw7-tanvis-projects-9201eba9.vercel.app"
+        ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         configuration.setAllowedHeaders(
                 Arrays.asList("Authorization", "Content-Type", "Accept", "Origin", "X-Requested-With"));
