@@ -41,3 +41,7 @@ application-local.properties
 
 # JDK folder
 Eclipse Adoptium/
+
+.env
+.env.*
+!.env.example
