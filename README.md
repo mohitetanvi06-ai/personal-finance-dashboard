@@ -93,41 +93,6 @@ flowchart TD
     K --> T([Logout])
 ```
 
-## 📂 Project Structure
-
-```text
-personal-finance-dashboard/
-│
-├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/personalfinance/finance/
-│   │       │       ├── config/
-│   │       │       ├── controller/
-│   │       │       ├── entity/
-│   │       │       ├── repository/
-│   │       │       ├── security/
-│   │       │       └── service/
-│   │       │
-│   │       └── resources/
-│   │           └── application.properties
-│   │
-│   └── Dockerfile
-│
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── App.jsx
-│
-├── public/
-├── package.json
-└── README.md
-```
-
-*Note: The structure above represents the main application layers; individual filenames may vary.*
 
 ## 🔐 Authentication & Security
 
